@@ -1,0 +1,2221 @@
+@charset "utf-8";
+@import url(ress.css);
+
+style>html {
+  overflow-y: scroll;
+}
+
+body {
+  min-width: 320px;
+  /* 行間プロパティ */
+  line-height: 2.5;
+  color: rgb(65, 65, 65);
+  font-size: 17.5px;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  color: rgb(65, 65, 65);
+  transition: 0.5s;
+}
+
+/* ロゴ */
+.top-logo {
+  text-align: center;
+}
+
+.honyaku {
+  text-align: center;
+}
+
+.head_txt {
+  text-align: center;
+}
+
+/* google-map */
+.head_inner a {
+  border: solid 1px #fff;
+}
+
+@media screen and (min-width:640px) {
+  .top-logo {
+    max-width: 13%;
+    margin: auto;
+  }
+
+  .main-04 {
+    font-size: 0.5em;
+  }
+
+  /* 宿泊予約 */
+  .yoyaku {
+    font-size: 0.8em;
+  }
+}
+
+/* 中央寄せ　(共通項) */
+@media screen and (min-width:960px) {
+
+  .containar,
+  .honyaku,
+  .yoyaku,
+  .gree,
+  .box17 {
+    max-width: 50%;
+    margin: auto;
+  }
+
+  /* 宿泊予約 */
+  .yoyaku {
+    font-size: 0.8em;
+  }
+
+  .head_copy {
+    text-align: center;
+  }
+
+  .top-logo {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/*
+=========================================
+	Base Layout
+=========================================
+*/
+/*ALL and Smart Phone*/
+.containar {
+  max-width: 320px;
+  padding-left: 10px;
+  margin: 0 auto;
+}
+
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.head_copy,
+.main-01-1 .head_copy {
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-top: 100px;
+}
+
+.main-01-1 .head_copy {
+  margin-bottom: 100px;
+}
+
+.main-04 {
+  margin-top: 100px;
+}
+
+@media screen and (min-width:960px) {
+
+  /* 上下余白 */
+  .head_copy,
+  .main-01-1 .head_copy,
+  .ilasuto img,
+  .main-05-1 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  /* 2㌻目 */
+  .page2-text {
+    margin-top: 100px;
+  }
+}
+
+/* ------------
+SNSシェアボタン (共通項)
+---------------*/
+
+.shareList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: -5px 0 -4px -5px;
+  padding: 0;
+}
+
+.shareList__item {
+  height: 30px;
+  line-height: 30px;
+  width: 30px;
+  margin: 5px 0 4px 5px;
+  text-align: center;
+}
+
+.shareList__link {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.shareList__link::before {
+  font-size: 16px;
+  display: block;
+  transition: .2s;
+}
+
+.shareList__link:hover {
+  opacity: 0.75;
+}
+
+.shareList__link.icon-twitter {
+  background: #55acee;
+  border-bottom: solid 4px rgba(0, 0, 0, 0.25);
+}
+
+.shareList__link.icon-facebook {
+  background: #3B5998;
+  border-bottom: solid 4px rgba(0, 0, 0, 0.25);
+}
+
+.shareList__link.icon-google-plus {
+  background: #dd4b39;
+  border-bottom: solid 4px rgba(0, 0, 0, 0.25);
+}
+
+.shareList__link.icon-hatebu {
+  background: #008FDE;
+  border-bottom: solid 4px rgba(0, 0, 0, 0.25);
+}
+
+.shareList__link.icon-pocket {
+  background: #EB4654;
+  border-bottom: solid 4px rgba(0, 0, 0, 0.25);
+}
+
+.shareList__link.icon-rss {
+  background: #ff9900;
+  border-bottom: solid 4px rgba(0, 0, 0, 0.25);
+}
+
+.shareList__link.icon-feedly {
+  background: #6cc655;
+  border-bottom: solid 4px rgba(0, 0, 0, 0.25);
+}
+
+.shareList__link.icon-pinterest {
+  background: #cb2027;
+  border-bottom: solid 4px rgba(0, 0, 0, 0.25);
+}
+
+.shareList__link.icon-linkedin {
+  background: #0e76a8;
+  border-bottom: solid 4px rgba(0, 0, 0, 0.25);
+}
+
+.shareList__link.icon-line {
+  background: #1dcd00;
+  border-bottom: solid 4px rgba(0, 0, 0, 0.25);
+}
+
+.shareList__link:active {
+  transform: translateY(4px);
+  border-bottom: none;
+}
+
+/*===================
+	Modules（Block）
+=====================*/
+/*ｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰ
+    header(共通項)
+------------------*/
+.header {
+  padding: 12.5%;
+  background: url(../images/home.jpg) center top no-repeat;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  opacity: 0.9;
+}
+
+.honyaku .head_txt {
+  font-size: 1.5em;
+}
+
+@media screen and (min-width:640px) {
+  .header {
+    padding: 80px 0;
+    text-align-last: left;
+  }
+}
+
+/* ---------------
+      翻訳機能  (共通項)
+------------------ */
+.honyaku a {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-family: "irohamaru";
+}
+
+/* -----------------------------
+予約ボタン(じゃらん・楽天・るるぶ)(共通項)
+--------------------------------- */
+.nav-wrapper {
+  background-color: #81c784;
+}
+
+/* 旅行アイコン */
+.nav-wrapper i {
+  background-color: #81c784;
+  font-size: 1.5em;
+  text-align: center;
+  color: #2e7fee;
+}
+
+.nav-wrapper i :hover {
+  color: #fff;
+  background-color: #ff5722;
+  opacity: 0.7;
+}
+
+.nav-wrapper a:hover {
+  color: #fff;
+  background-color: #ff5722;
+  opacity: 0.7;
+}
+
+/* リンク　じゃらん等 (共通項)*/
+.nav-wrapper a {
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 2rem;
+}
+
+.nav-content {
+  background-color: #81c784;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+/* 宿泊予約ボタン(共通項) */
+.gnav {
+  text-align: center;
+}
+
+
+/* ご予約・お問い合わせ (共通項)*/
+.head_txt {
+  font-weight: bold;
+  font-size: 14px;
+  font-family: "irohamaru";
+}
+
+.head_txt span {
+  font-size: 3rem;
+  color: #fff;
+}
+
+/* 電話アイコン */
+.head_txt i {
+  font-size: 3.5rem;
+  color: #2e7fea;
+}
+
+body {
+  min-width: 320px;
+  /* 行間プロパティ */
+  line-height: 2.5;
+  color: rgb(65, 65, 65);
+  font-size: 17.5em;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  color: rgb(65, 65, 65);
+  transition: 0.5s;
+}
+
+/* ロゴ */
+.top-logo {
+  text-align: center;
+}
+
+.honyaku {
+  text-align: center;
+}
+
+.head_txt {
+  text-align: center;
+}
+
+@media screen and (min-width:640px) {
+  .top-logo img {
+    max-width: 120%;
+    margin: 0 auto;
+    /* text-align: center; */
+  }
+}
+
+/* 中央寄せ　(共通項) */
+@media screen and (min-width:960px) {
+
+  .header-photo {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
+  .containar,
+  .honyaku,
+  .yoyaku,
+  .gree,
+  .box17 {
+    max-width: 50%;
+    margin: auto;
+  }
+
+  .head_copy {
+    text-align: center;
+  }
+
+  .top-logo {
+    max-width: 120%;
+    margin: 0 auto;
+  }
+
+}
+
+/*
+=========================================
+	Base Layout
+=========================================
+*/
+/*ALL and Smart Phone*/
+.containar {
+  max-width: 320px;
+  padding-left: 10px;
+  margin: 0 auto;
+}
+
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.head_copy {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+@media screen and (min-width:320px) {
+  .head_copy {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .yoyaku .nav-wrapper a {
+    font-size: 1.4em;
+  }
+}
+
+/* ======================
+グローバルナビ-01(共通項) 
+=========================*/
+.gnav-01 {
+  line-height: 2em;
+  text-align: center;
+}
+
+.gnav-01 span {
+  font-size: 18.5px;
+  text-align: center;
+}
+
+.gnav-01 a {
+  color: #fff;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+}
+
+.el_main_sect__ttl {
+  font-family: 'Kosugi Maru', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* グローバルナビ(グラデーション) */
+.nav .home {
+  background-color: #ff5722;
+}
+
+.nav .home:hover {
+  background-color: #fbe9ef;
+  color: #ff5722;
+}
+
+.nav .isonoya {
+  background-color: #ff7043;
+}
+
+.nav.isonoya {
+  background: #ffccbc;
+  color: #ff5722;
+}
+
+.nav .plan {
+  background-color: #ff8a65;
+}
+
+.nav .plan:hover {
+  background: #ffab91;
+  color: #ff5722;
+}
+
+.nav .access {
+  background-color: #ffab91;
+}
+
+.nav .access:hover {
+  background: #ff8a65;
+  color: #ff5722;
+}
+
+.nav .link {
+  background-color: #ffccbc;
+}
+
+.nav .link:hover {
+  background: #ff7043;
+  color: #ff5722;
+}
+
+.nav .staff {
+  background-color: #fbe9e7;
+  color: #616161;
+}
+
+.nav .staff:hover {
+  background: #ff5722;
+  color: #fbe9e7;
+}
+
+/*---------------------
+パンくずリスト  (共通項)
+ -----------------------*/
+.breadcrumb {
+  margin-left: 0;
+  padding-left: 0;
+  text-align: center;
+}
+
+.breadcrumb li {
+  display: inline;
+  /*横に並ぶように*/
+  list-style: none;
+  font-weight: bold;
+  /*太字*/
+}
+
+.breadcrumb li:after {
+  /* >を表示*/
+  content: '>';
+  padding: 0 3px;
+  color: #464646;
+}
+
+.breadcrumb li:last-child:after {
+  content: '';
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+  color: gray;
+}
+
+.breadcrumb li:first-child a:before {
+  /*家アイコン*/
+  font-family: FontAwesome;
+  content: '\f015';
+  font-weight: normal;
+  font-size: 1rem;
+  color: #2e7fea;
+}
+
+.breadcrumb li a:hover {
+  text-decoration: underline;
+}
+
+/* =================
+   main           
+==================== */
+/* ---------------
+      home-1㌻目
+------------------*/
+/* 見出し(共通) */
+h4 {
+  text-align: center;
+}
+
+/* 見出し行間 */
+.main-01 h4 {
+  line-height: 2em;
+}
+
+.main-01,
+.main-05,
+.main-09,
+.main-12,
+.main-14,
+.mmain-17,
+.main-19 {
+  margin-bottom: 100px;
+  font-size: 0.9em;
+}
+
+/* 写真の変形 */
+.main-03 img {
+  /* 六角形 */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/* 飾り枠線　（全ページ共通 ） */
+.box17 {
+  margin: 2em 0;
+  position: relative;
+  padding: 0.5em 1.5em;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+  text-align: center;
+  line-height: 30px;
+  /* 行の高さを指定する */
+}
+
+.box17:before,
+.box17:after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 2px;
+  height: calc(100% + 20px);
+  background-color: rgb(117, 114, 114);
+}
+
+.box17:before {
+  left: 10px;
+}
+
+.box17:after {
+  right: 10px;
+}
+
+.box17 p {
+  margin: 0;
+  padding: 0;
+  font-size: 17.5px;
+}
+
+.box17 h4,
+.main-01 h4,
+.main-04 p,
+.main-05 h4,
+.main-09 h4,
+.main-12 h4,
+.main-14 h4,
+.main-17 h4,
+.main-52 h4 {
+  font-family: 'Kosugi Maru', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* 見出し(共通) */
+h4 {
+  text-align: center;
+}
+
+/* 飾り見出し (1文字目のみ大ｵﾚﾝｼﾞ)*/
+h4:first-letter {
+  font-size: 2em;
+  color: #ff5722;
+}
+
+/* 飾り見出し (ｵﾚﾝｼﾞｰｸﾞﾚｰｸﾞﾗﾃﾞ)全ページ共通*/
+h4:after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: linear-gradient(to right, rgb(230, 90, 90), transparent);
+}
+
+/* 1㌻目の文章 */
+.main-01 p {
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+.main-02 {
+  margin-bottom: 100px;
+  font-size: 18.5px;
+}
+
+/* NEWS! */
+.main-02 h2 {
+  font-family: 'Kosugi Maru', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* NEWS内の記事 */
+.main-02 p {
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+/* NEWS内の記事 中央寄せ */
+.box17-01 {
+  text-align: center;
+}
+
+/* 新聞&指アイコン */
+.main-02 i {
+  color: #2e7fee;
+}
+
+.news p:hover {
+  color: #fff;
+  background-color: #ff5722;
+  width: 100%;
+  opacity: 0.7;
+  text-align: center;
+}
+
+/* NEWS!それぞれのコンテンツに飾り線(オレンジーグレーのグラデ) */
+.news01:after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: linear-gradient(to right, rgb(230, 90, 90), transparent);
+}
+
+.news02:after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: linear-gradient(to right, rgb(230, 90, 90), transparent);
+}
+
+.news03:after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: linear-gradient(to right, rgb(230, 90, 90), transparent);
+}
+
+.news04:after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: linear-gradient(to right, rgb(230, 90, 90), transparent);
+}
+
+.main-03 {
+  margin-bottom: 100px;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+/* 鳥PIC集 */
+/* 草花PIC集 */
+/* 名所PIC集 */
+.bird-02,
+.flowers-02,
+.places-02 {
+  width: 60%;
+}
+
+.bird-01 img,
+.flowers-01 img,
+.places-01 img {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
+.bird-02 h3,
+.flowers-02 h3,
+.places-02 h3 {
+  float: right;
+  font-weight: bold;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+.main-03-1 {
+  margin-top: 1em;
+  text-align: center;
+}
+
+/* 焼尻鳥類研究所 */
+.box-box {
+  text-align: center;
+  margin-top: 3em;
+}
+
+.bird-02 h3,
+.flowers-02 h3,
+.places-02 h3 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* 焼尻島の草花 */
+.box-box-02 {
+  float: right;
+  /* margin-top: 10em; */
+}
+
+.flowers-01 {
+  text-align: center;
+}
+
+.flowers-02 h3 {
+  font-weight: bold;
+}
+
+/* 焼尻島の名所 */
+.box-box-03 {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.places-02 h3 {
+  font-weight: bold;
+}
+
+/* youtubeの埋め込み */
+.umekomi {
+  text-align: center;
+}
+
+/* 全ページlink上の山ー飾り線 */
+.page-ilasto {
+  margin-bottom: 1.5rem;
+}
+
+/* オーナーブログ */
+.main-04 {
+  text-align: center;
+}
+
+.main-04 i {
+  color: #2e7fea;
+}
+
+/* 山ー飾り線 (飾り線のイラスト全頁共通)*/
+.ilasuto {
+  text-align: center;
+}
+
+.main-04 p {
+  font-size: 18.5px;
+}
+
+.main-04 p:hover {
+  color: #fff;
+  background-color: #ff5722;
+  width: 100%;
+  opacity: 0.7;
+  text-align: center;
+}
+
+/* メイン　紹介文02 */
+.main-01-1 {
+  font-family: 'Kosugi Maru', sans-serif;
+
+}
+
+/* 焼尻鳥類研究所 */
+/* 焼尻島の名所 */
+/* 草花の余白 */
+.box-box-02 {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+@media screen and (min-width:320px) {
+  .main-03 img {
+    width: 100%;
+  }
+
+  .bird-02 h3,
+  .flowers-02 h3,
+  .places-02 h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width:640px) {
+
+  /* フッター羊の大きさ */
+  .hituji img {
+    width: 65%;
+  }
+
+  /* オーナーブロブ */
+  .main-04 {
+    font-size: 1em;
+  }
+
+  /* 焼尻鳥類研究所 */
+  /* 焼尻島の名所 */
+  /* 草花の見出し */
+  .bird-02 h3,
+  .flowers-02 h3,
+  .places-02 h3 {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width:960px) {
+
+  /* グローバルナビ */
+  .gnav-01 {
+    max-width: 65%;
+    margin: 0 auto;
+  }
+
+  /* 紹介文 */
+  .box17 {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
+  .box17 h4 {
+    font-size: 16px;
+  }
+
+  /* ヘッドコピー および全頁文章を中央寄せ(全頁共通)*/
+  .head_copy .box17,
+  .footer-photo img,
+  .main-09 .box17,
+  .page2-text-02 .box17,
+  .page2-text-03 .box17,
+  .page2-text-04 .box17,
+  .page3-text-02 .box17,
+  .page3-text-03 .box17,
+  .page3-text-04 .box17,
+  .page3-text-05 .box17,
+  .page3-text-06 .box17,
+  .page3-text-07 .box17,
+  .page4-text-01 .box17,
+  .page4-text-02 .box17,
+  .page4-text-03 .box17,
+  .page4-text-04 .box17,
+  .page4-text-05 .box17,
+  .page4-text-06 .box17 {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
+  .footer-photo {
+    text-align: center;
+  }
+
+  /* NEWS */
+  .main-02 {
+    max-width: 50%;
+    margin: 0 auto;
+    left: 20em;
+  }
+
+  /* 1㌻目 画像 */
+  .main-03 {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
+  /* 1㌻目 画像 */
+  /* .main-03 {
+    width: 40%;
+    margin: 0 auto;
+    max-width: 30%;
+  } */
+
+  /* オーナーブロブ中央寄せ */
+  .main-04 {
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1em;
+  }
+
+}
+
+@media screen and (min-width:1280px) {
+  .box17 {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width:1920px) {
+
+  /* 紹介文 */
+  .main-01 {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
+  /* NEWS */
+  .main-02 {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
+  .header-photo {
+    max-width: 65%;
+    margin: 0 auto;
+  }
+}
+
+/* =================
+isonoya-2㌻目　メイン
+==================== */
+/* -----------------------------------------
+#磯乃屋について
+# Plan,# Access,# Link,# Staff (前頁共通)
+-------------------------------------------*/
+.isonoya-copy,
+.plan-copy,
+.access-copy,
+.link-copy,
+.gree .staff-copy,
+.staff-copy {
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #424344;
+  font-family: "irohamaru";
+}
+
+.main-05 p,
+.main-09 p,
+.main-12 p,
+.main-14 p,
+.main-17 p,
+.main-05-1 {
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 17.5px;
+}
+
+.main-05-1 h4 {
+  line-height: 2em;
+}
+
+/* 写真の変形 */
+.main-06 img,
+.main-06-1 img {
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+
+
+.main-07 img {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.main-08 img,
+.main-010 {
+  margin-bottom: 100px;
+}
+
+/* 料理写真　下幅無くす */
+/* .main-08 {
+    margin-bottom: 0;
+  } */
+
+/* 山―イラスト余白 */
+
+.main-015 {
+  margin-bottom: 100px;
+}
+
+.main-018 {
+  margin-top: 100px;
+}
+
+/* 施設概要 */
+.main-05-1 p {
+  font-family: 'Kosugi Maru';
+  font-weight: bold;
+}
+
+/* 2.3.4.5.6ﾍﾟｰｼﾞ共通　サークルのlink */
+.circle a {
+  font-size: 1em;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-weight: bold;
+}
+
+/* isonoya,planページ写真中央寄せ設定 */
+@media screen and (min-width:960px) {
+
+  .main-06 img,
+  .main-06-1 img,
+  .main-06 img,
+  .main-06-1 img,
+  .main-08 img,
+  .main-11 img,
+  .main-11-1 img,
+  .main-11-2 img,
+  .main-13 img,
+  .main-13-1 img,
+  .main-13-2 img,
+  .main-016 img,
+  .main-018 img,
+  .main-020 img,
+  .main-022,
+  .main-024,
+  .main-026,
+  .circle {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  /* 写真を右寄せ(奥様､お風呂②PIC) */
+  .main-06-1 img,
+  .main-13-1 img {
+    float: right;
+  }
+
+  .main-08,
+  .main-11-2,
+  .main-13,
+  .main-016,
+  .main-018,
+  .main-020,
+  .main-026 {
+    text-align: center;
+  }
+
+  /* お部屋PIC右寄せ */
+  .main-11-2 img {
+
+    float: right;
+  }
+
+  /* 回り込み解除　－館内についてー */
+  .main-12 {
+    overflow: hidden;
+    clear: both;
+  }
+
+  /* 飾り枠線　（全ページ共通 ） */
+  .main-027,
+  .main-028,
+  .main-029 {
+    margin: 2em 0;
+    position: relative;
+    padding: 0.5em 1.5em;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+    text-align: center;
+    line-height: 30px;
+    /* 行の高さを指定する */
+  }
+
+}
+
+/* =================
+plan-3㌻目　メイン
+==================== */
+.header-photo-plan h1 {
+  color: #fff;
+  padding: 45%;
+  background: url(/images/plan-3㌻目.jpg) center top no-repeat;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+}
+
+.box17 h4 {
+  font-size: 18.5px;
+}
+
+.box17 h5 {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "irohamaru";
+  line-height: 2em;
+}
+
+.main-019 p,
+.page3-text-02 p,
+.main-21 p,
+.main-023 p,
+.main-025 p,
+.main-027 p,
+.main-028 p,
+.main-029 p {
+  font-family: 'Kosugi Maru', sans-serif;
+  /* font-weight: bold; */
+}
+
+/* テーブル-01 */
+.table-01,
+.table-02,
+.table-03,
+.table-04 {
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 0.59em;
+  font-weight: bold;
+}
+
+/* #宿泊プランと写真間の余白なし */
+.main-018 {
+  margin-top: 0;
+}
+
+/* 羊のPICとプラン説明間 */
+.main-019 .head_copy {
+  margin: 0;
+}
+
+/* プランとうに丼プラン間 */
+.table-01 {
+  margin-bottom: 100px;
+}
+
+/* うに丼プランとビジネスプラン間 */
+.table-02 {
+  margin-bottom: 100px;
+}
+
+/* ビジネスプランとお子様プラン間 */
+.table-03 {
+  margin-bottom: 100px;
+}
+
+/* お子様プランと羊肉　間 */
+.table-04 {
+  margin-bottom: 100px;
+}
+
+/* 羊肉と割引特典　間 */
+.main-027 {
+  margin-bottom: 100px;
+}
+
+/* 割引特典とその他　間 */
+.main-028 {
+  margin-bottom: 100px;
+}
+
+/* その他サービスとブログ　間 */
+.main-04 {
+  margin-top: 50px;
+}
+
+/* 羊肉センター */
+.main-026 {
+  text-align: center;
+}
+
+/* スマホ縦型、ブレイクポイント */
+/* i phon 6+ */
+@media screen and (min-width:375px) {
+
+  .table-01,
+  .table-02,
+  .table-03,
+  .table-04 {
+    font-size: 0.7em;
+  }
+}
+
+/* スマホ横型の際、ブレイクポイント */
+/* i phon 6+ */
+@media screen and (min-width:414px) {
+
+  .table-01,
+  .table-02,
+  .table-03,
+  .table-04 {
+    font-size: 0.8em;
+  }
+}
+
+/* スマホ横型の際、ブレイクポイント */
+@media screen and (min-width:480px) {
+
+  .table-01,
+  .table-02,
+  .table-03,
+  .table-04 {
+    font-size: 0.9em;
+  }
+}
+
+/* タブレット版ーブレイクポイント */
+@media screen and (min-width:640px) {
+
+  .main-019 .head_copy h4,
+  .main-021 .box17 h4,
+  .main-019 .box17 p,
+  .main-021 .box17 p,
+  .main-023 .box17 h4,
+  .main-023 .box17 p,
+  .main-025 .box17 h4,
+  .main-025 .box17 p,
+  .main-027 .box17 h4,
+  .main-027 .box17 p,
+  .main-027 .box17 h5,
+  .main-028 .box17 h4,
+  .main-028 .box17 h5,
+  .main-029 .box17 h4,
+  .main-029 .box17 h5,
+  .main-04 .black-text p {
+    font-size: 1em;
+    line-height: 1.5;
+    /* margin-top: 0.8em; */
+  }
+
+  .table-01,
+  .table-02,
+  .table-03,
+  .table-04 {
+    font-size: 1em;
+  }
+
+  /* 割引特典 */
+  .main-028 .box17 p,
+  .main-029 .box17 p {
+    font-size: 1
+    em;
+  }
+
+  /* オーナーブログ */
+  strong {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width:960px) {
+
+  .main-018 img,
+  .main-020 img,
+  .main-046 img {
+    width: 50%;
+  }
+
+  .main-020 img {
+    width: 40%;
+  }
+
+  /* 期間と料金　センター寄せ */
+  .table-01,
+  .table-02,
+  .table-03,
+  .table-04,
+  .table-01 tr,
+  .table-02 th,
+  .table-03 th,
+  .table-04 th {
+    text-align: center;
+  }
+
+  .table-01 {
+    text-align: center;
+    ;
+  }
+
+}
+
+/* =================
+access-4㌻目　メイン
+==================== */
+.box17 p {
+  font-size: 17px;
+}
+
+/* 全頁共通ー見出し余白 */
+.box17 h4 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* 小見出し */
+.box17 h5 span {
+  font-size: 0.75em;
+  /* margin-bottom: 2em; */
+}
+
+/* 小見出し */
+.box17 h5 {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* 札幌―羽幌 */
+.main-access-contents i,
+/* 夏休み親子割引 TEL*/
+.main-access-txt-sub unique-link span {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+/* 各種リンクのホバー */
+.main-access-contents a:hover {
+  background-color: #ff8a65;
+  color: #fff;
+}
+
+/* ※注意書き */
+.chuui {
+  color: #f00;
+  text-align: center;
+}
+
+/* アイコン */
+.main-access-contents i,
+.main-access-txt-area i {
+  color: #2e7fee;
+  font-size: 1.4em;
+}
+
+.main-access-txt-area span {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+/* TELと割引 */
+.main-access-txt-area span,
+.page4-text-03 span {
+  border: solid 1px #f00;
+  color: #f00;
+}
+
+/* 水兵さんのイラスト */
+.ilasto {
+  text-align: center;
+}
+
+/* 写真の形状の変化 */
+.main-031,
+.main-034,
+.main-43 {
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+.main-032 p,
+.main-035 p {
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 17.5px;
+}
+
+.page4-text-01 p,
+.page-text-02 p,
+.main-acccess-contents p,
+.page4-text-03 p {
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+.main-ttl {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+/* 文章 */
+.box17 p {
+  font-size: 17.5px;
+  /* 小見出しと文章間の余白 */
+  margin-top: 1em;
+}
+
+/* 水兵さんのイラスト */
+.ilasto {
+  text-align: center;
+}
+
+/* 水兵さんイラストと天売島の下余白 */
+.main-042 {
+  margin-bottom: 50px;
+}
+
+/* 夕日PICと水兵さんの余白 */
+.main-045 {
+  margin-top: 50px;
+}
+
+/* 2グリーン：LOGO 余白*/
+.main-access-pc img {
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+}
+
+/* 2グリーン：LOGO 余白*/
+.main-access-txtarea img {
+  margin-top: 1.5em;
+}
+
+.onsen-link a {
+  font-size: 1.5em;
+  border-bottom: solid 1.3px;
+}
+
+/* 各種　温泉LINK */
+.onsen .onsen-link a:hover {
+  background-color: #ff8a65;
+  color: #fff;
+}
+
+/* 周辺温泉地情報 */
+.main-ttl {
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 3;
+}
+
+@media screen and (min-width:960px) {
+
+  .main-031 img,
+  .main-034 img,
+  .main-037 img,
+  .main-043 img,
+  .main-046 img {
+    width: 50%;
+  }
+
+  .main-031,
+  .main-034,
+  .main-037,
+  .main-043,
+  .main-046 {
+    text-align: center;
+  }
+}
+
+/* ===============
+link-5㌻目 メイン
+================== */
+.link-copy {
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+  color: #6a6b6c;
+  font-family: "Hannari";
+}
+
+.flower01,
+.flower02,
+.flower03,
+.flower04,
+.flower05,
+.flower06 {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+/* 羊ー飾り線 */
+.main-046 {
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+/* リンク集と花PIC　間 */
+.flower04 {
+  margin-top: 100px;
+}
+
+/* 花PICと羊のイラスト飾り線　間 */
+.main-048 {
+  margin-top: 25px
+}
+
+.main_link_list dd {
+  font-size: 18px;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+.main_link_list a:hover {
+  color: #fff;
+  background-color: #ff5722;
+  width: 100%;
+  opacity: 0.7;
+  text-align: center;
+}
+
+@media screen and (min-width:960px) {
+
+  .flower01,
+  .flower02,
+  .flower03,
+  .flower04,
+  .flower05,
+  .flower06,
+  .main-049,
+  .main-044-01 img {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
+  .main-044-01 {
+    text-align: center;
+  }
+}
+
+/* =================
+staff-6㌻目 メイン
+==================== */
+.main-051 {
+  margin-top: 100px;
+}
+
+.main-052 .head_copy {
+  margin-top: 5%;
+}
+
+.box18 h4 {
+  font-weight: bold;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 16px;
+}
+
+/* Staff募集 */
+.staff-copy {
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #6a6b6c;
+  font-family: "Hannari";
+}
+
+.header-photo-staff h1 {
+  color: #ffffff;
+  float: left;
+  padding: 47%;
+  background: url(/images/staff-6㌻目-00.jpg) center top no-repeat;
+  background-size: cover;
+  text-align: center;
+  position: absolute;
+}
+
+.main-052 h5 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.main-052 p {
+  font-size: 1em;
+}
+
+.staff-table {
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+.main-access-txt-area a:hover {
+  color: #fff;
+  background-color: #ff5722;
+  width: 100%;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.box17 {
+  margin: 2em 0;
+  position: relative;
+  padding: 0.5em 1.5em;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+}
+
+@media screen and (min-width:960px) {
+
+  .main-050 img,
+  .main-055 img {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
+  .main-050,
+  .main-055 {
+    text-align: center;
+  }
+}
+
+/* =================
+staff-6㌻目 メイン
+==================== */
+.box18 h4 {
+  font-weight: bold;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 16px;
+}
+
+/* Staff募集 */
+.staff-copy {
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #6a6b6c;
+  font-family: "Hannari";
+}
+
+.header-photo-staff h1 {
+  color: #ffffff;
+  float: left;
+  padding: 47%;
+  background: url(/images/staff-6㌻目-00.jpg) center top no-repeat;
+  background-size: cover;
+  text-align: center;
+  position: absolute;
+}
+
+.main-052 h5 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.main-052 p {
+  font-size: 1em;
+}
+
+.staff-table {
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+.main-access-txt-area a:hover {
+  color: #fff;
+  background-color: #ff5722;
+  width: 100%;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.box17 {
+  margin: 2em 0;
+  position: relative;
+  padding: 0.5em 1.5em;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+}
+
+@media screen and (min-width:960px) {
+
+  .main-050 img,
+  .main-055 img {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
+  .main-050,
+  .main-055 {
+    text-align: center;
+  }
+}
+
+/* ======================
+グローバルナビ-01(共通項) 
+=========================*/
+.gnav-01 {
+  text-align: center;
+}
+
+.gnav-01 span {
+  font-size: 18.5px;
+  text-align: center;
+}
+
+.gnav-01 a {
+  color: #fff;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+}
+
+.el_main_sect__ttl {
+  font-family: 'Kosugi Maru', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* グローバルナビ(グラデーション) */
+.nav .home {
+  background-color: #ff5722;
+}
+
+.nav .home:hover {
+  background-color: #fbe9ef;
+  color: #ff5722;
+}
+
+.nav .isonoya {
+  background-color: #ff7043;
+}
+
+.nav .isonoya:hover {
+  background-color: #ffccbc;
+  color: #ff5722;
+}
+
+.nav .plan {
+  background-color: #ff8a65;
+}
+
+.nav .plan:hover {
+  background-color: #ffab91;
+  color: #ff5722;
+}
+
+.nav .access {
+  background-color: #ffab91;
+}
+
+.nav .access:hover {
+  background-color: #ff8a65;
+  color: #ff5722;
+}
+
+.nav .link {
+  background-color: #ffccbc;
+}
+
+.nav .link:hover {
+  background-color: #ff7043;
+  color: #ff5722;
+}
+
+.nav .staff {
+  background-color: #fbe9e7;
+  color: #616161;
+}
+
+.nav .staff:hover {
+  background-color: #ff5722;
+  color: #fbe9e7;
+}
+
+/* ===================
+     フッター  (共通項)
+====================== */
+
+/* TOPへ戻るボタン */
+.pagetop {
+  width: 14.0625%;
+  min-width: 45px;
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+}
+
+.pagetop p:hover {
+  background-color: #d1d1ce;
+}
+
+.add p {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.add {
+  text-align: center;
+  font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+}
+
+.head_txt span {
+  font-size: 3rem;
+  color: #fff;
+}
+
+/* 宿泊予約ボタン(共通項) */
+.gnav {
+  text-align: center;
+}
+
+.add a {
+  color: #fff;
+  border: solid 1px #fff;
+}
+
+/* 指アイコン */
+.youtube i {
+  color: #2e7fee;
+}
+
+.youtube a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.youtube a:hover {
+  color: #fff;
+  background-color: #ff5722;
+  width: 50%;
+  opacity: 0.7;
+  text-align: center;
+}
+
+@media screen and (min-width:640px) {
+  .logo-02 {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+
+/* 微調整 */
+@media screen and (min-width:320px) {
+
+  .head_copy,
+  .main-01-1 .head_copy {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .breadcrumb a {
+    font-size: 0.8em;
+    line-height: 1rem;
+  }
+
+  .honyaku {
+    line-height: 3.5rem;
+  }
+
+  .head_inner {
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Kosugi Maru', sans-serif;
+  }
+
+  .head_inner .head_txt span {
+    font-size: 2.5rem;
+  }
+
+  .nav-wrapper a i {
+    font-size: 4rem;
+  }
+
+  .news01 span,
+  .news02 span,
+  .news03 span,
+  .news04 span {
+    font-weight: bold;
+  }
+
+  .add {
+    font-size: 1.45rem;
+    font-weight: bold;
+  }
+
+  .copyright {
+    font-size: 0.7em;
+  }
+}
+
+/* -------------
+   birdページ
+   -------------- */
+/* 焼尻鳥類研究所 */
+.bird_01 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.bird_02 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.bird_03 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.bird_04 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.bird_05 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.bird_06 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.bird_07 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.bird_08 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.bird_09 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.bird_10 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.bird_11 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.bird_12 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.bird_13 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.bird_14 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.bird_15 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.bird_16 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+@media screen and (min-width:320px) {
+  .bird img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:960px) {
+
+  .flexbox {
+    display: flex;
+  }
+
+  .bird_01 img,
+  .bird_02 img,
+  .bird_03 img,
+  .bird_04 img,
+  .bird_05 img,
+  .bird_06 img,
+  .bird_07 img,
+  .bird_08 img,
+  .bird_09 img,
+  .bird_10 img,
+  .bird_11 img,
+  .bird_12 img,
+  .bird_13 img,
+  .bird_14 img,
+  .bird_15 img,
+  .bird_16 img {
+    max-width: 70rem;
+  }
+
+  .bird_01,
+  .bird_02,
+  .bird_03,
+  .bird_04,
+  .bird_05,
+  .bird_06,
+  .bird_07,
+  .bird_08,
+  .bird_09,
+  .bird_10,
+  .bird_11,
+  .bird_12,
+  .bird_13,
+  .bird_14,
+  .bird_15,
+  .bird_16 {
+    text-align: center;
+  }
+}
+
+/* -------------
+   flowersページ
+   -------------- */
+/* 焼尻の草花 */
+.flowers_01 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.flowers_02 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.flowers_03 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.flowers_04 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.flowers_05 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.flowers_06 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.flowers_07 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.flowers_08 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.flowers_09 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+/* オンコ */
+.flowers_09 {
+  text-align: center;
+}
+
+@media screen and (min-width:320px) {
+  .bird img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:960px) {
+  .flexbox {
+    display: flex;
+  }
+}
+
+/* -------------
+   placesページ
+   -------------- */
+/* 焼尻の名所 */
+.places_01 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.places_02 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.places_03 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.places_04 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.places_05 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.places_06 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.places_07 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.places_08 a:hover {
+  background-color: #ff5722;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.places_01,
+.places_02,
+.places_03,
+.places_04,
+.places_05,
+.places_06,
+.places_07,
+.places_08 {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
